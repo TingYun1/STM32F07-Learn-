@@ -17,7 +17,7 @@ int main(void)
 	while(1)
 	{
 //		if(KEY_Scan(GPIOA,GPIO_Pin_0)==KEY_ON) LED_TOGGLE;
-		if(KEY_Scan(GPIOE,GPIO_Pin_4)==KEY_ON) LED_TOGGLE;
+		if(KEY_Scan(GPIOA,GPIO_Pin_0)==KEY_ON) LED_TOGGLE;
 			
 //		GPIO_SetBits(GPIOA,GPIO_Pin_6);
 //		Delay(0xffffff);
