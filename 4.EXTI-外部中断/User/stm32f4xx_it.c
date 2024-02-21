@@ -145,14 +145,14 @@ void SysTick_Handler(void)
  
 }
 
-void KEY1_IRQHandler(void)
-{
-	if(EXTI_GetITStatus(EXTI_Line0)!=RESET)
-	{
-		LED_TOGGLE;
-		EXTI_ClearITPendingBit(EXTI_Line0);
-	}
-}
+//void KEY1_IRQHandler(void)
+//{
+//	if(EXTI_GetITStatus(EXTI_Line0)!=RESET)
+//	{
+//		LED_TOGGLE;
+//		EXTI_ClearITPendingBit(EXTI_Line0);
+//	}
+//}
 
 /******************************************************************************/
 /*                 STM32F4xx Peripherals Interrupt Handlers                   */

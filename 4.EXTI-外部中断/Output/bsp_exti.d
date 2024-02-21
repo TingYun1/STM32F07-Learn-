@@ -35,3 +35,4 @@
 ..\..\output\bsp_exti.o: ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 ..\..\output\bsp_exti.o: ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\..\output\bsp_exti.o: ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+..\..\output\bsp_exti.o: ..\..\User\Led\bsp_led.h

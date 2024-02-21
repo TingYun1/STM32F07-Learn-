@@ -1,5 +1,5 @@
 #include "bsp_exti.h"
-
+#include "bsp_led.h"
 static void NVIC_Configuration(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure;
@@ -42,6 +42,7 @@ void EXTI_Key_Config(void)
 	
 	/*连接EXTI中断源到key1引脚*/
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA,EXTI_PinSource0);
+  //GPIO_EXTILineConfig(EXTI_PortSourceGPIOA,EXTI_PinSource0);
 	
 	/*选择EXTI中断源*/
 	EXTI_InitStructure.EXTI_Line=EXTI_Line0;
@@ -58,3 +59,11 @@ void EXTI_Key_Config(void)
 	/*第四步：编写中断服务函数*/
 }
 
+void KEY1_IRQHandler(void)
+{
+	if(EXTI_GetITStatus(EXTI_Line0)!=RESET)
+	{
+		LED_TOGGLE;
+		EXTI_ClearITPendingBit(EXTI_Line0);
+	}
+}
